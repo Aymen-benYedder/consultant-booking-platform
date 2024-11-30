@@ -1,0 +1,290 @@
+{
+    "users": [
+        {
+            "role": "admin",
+            "googleId": "admin001",
+            "email": "admin1@example.com",
+            "name": "Admin One",
+            "phoneNumber": "+111222333",
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1xXUu2zfLrJRQzQK3LJoHN5bzxcHDWtnOlQ&s",
+            "permissions": ["manageUsers", "manageServices", "viewReports"]
+        },
+        {
+            "role": "admin",
+            "googleId": "admin002",
+            "email": "admin2@example.com",
+            "name": "Admin Two",
+            "phoneNumber": "+444555666",
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1xXUu2zfLrJRQzQK3LJoHN5bzxcHDWtnOlQ&s",
+            "permissions": ["manageUsers", "viewReports"]
+        },
+        {
+            "role": "client",
+            "googleId": "client001",
+            "email": "client1@example.com",
+            "name": "Client One",
+            "phoneNumber": "+777888999",
+            "avatar": "https://attic.sh/da7emsd62ic9nxfmjawhuqtuiafg"
+        },
+        {
+            "role": "client",
+            "googleId": "client002",
+            "email": "client2@example.com",
+            "name": "Client Two",
+            "phoneNumber": "+123123123",
+            "avatar": "https://attic.sh/da7emsd62ic9nxfmjawhuqtuiafg"
+        },
+        {
+            "role": "client",
+            "googleId": "client003",
+            "email": "client3@example.com",
+            "name": "Client Three",
+            "phoneNumber": "+321321321",
+            "avatar": "https://attic.sh/da7emsd62ic9nxfmjawhuqtuiafg"
+        },
+        {
+            "role": "consultant",
+            "googleId": "consultant001",
+            "email": "consultant1@example.com",
+            "name": "Consultant One",
+            "phoneNumber": "+101010101",
+            "avatar": "https://eisenberglawgrouppc.com/wp-content/uploads/2023/12/Lawyer-300x300.png",
+            "specialization": "Tax Law",
+            "ratePerHour": 250,
+            "availability": [
+                {
+                    "day": "Monday",
+                    "timeSlots": [
+                        { "start": "09:00", "end": "12:00" },
+                        { "start": "13:00", "end": "16:00" }
+                    ]
+                },
+                {
+                    "day": "Wednesday",
+                    "timeSlots": [
+                        { "start": "10:00", "end": "15:00" }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "consultant",
+            "googleId": "consultant002",
+            "email": "consultant2@example.com",
+            "name": "Consultant Two",
+            "phoneNumber": "+202020202",
+            "avatar": "https://cdn-ilbpofh.nitrocdn.com/bRXomxzkVDASyryJJdVClUyWAHNVOWCK/assets/images/optimized/rev-9c1e72e/www.rjaffelaw.com/wp-content/uploads/2024/08/Birmingham-Cyber-Crimes-Lawyer-300x300.jpg",
+            "specialization": "Contract Law",
+            "ratePerHour": 300,
+            "availability": [
+                {
+                    "day": "Tuesday",
+                    "timeSlots": [
+                        { "start": "08:00", "end": "12:00" }
+                    ]
+                },
+                {
+                    "day": "Thursday",
+                    "timeSlots": [
+                        { "start": "14:00", "end": "18:00" }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "consultant",
+            "googleId": "consultant003",
+            "email": "consultant3@example.com",
+            "name": "Consultant Three",
+            "phoneNumber": "+303030303",
+            "avatar": "https://ferrarovega.com/wp-content/uploads/2021/04/San-Diego-Workplace-Discrimination-Lawyer-300x300.jpg",
+            "specialization": "Corporate Law",
+            "ratePerHour": 280,
+            "availability": [
+                {
+                    "day": "Friday",
+                    "timeSlots": [
+                        { "start": "09:00", "end": "12:00" },
+                        { "start": "13:00", "end": "16:00" }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "consultant",
+            "googleId": "consultant004",
+            "email": "consultant4@example.com",
+            "name": "Consultant Four",
+            "phoneNumber": "+404040404",
+            "avatar": "https://toplawyerscanada.ca/wp-content/uploads/Toronto-Criminal-Defence-Lawyer-Arman-Farjoud-Top-Lawyers-2024.jpg",
+            "specialization": "Intellectual Property",
+            "ratePerHour": 320,
+            "availability": [
+                {
+                    "day": "Monday",
+                    "timeSlots": [
+                        { "start": "10:00", "end": "14:00" }
+                    ]
+                },
+                {
+                    "day": "Wednesday",
+                    "timeSlots": [
+                        { "start": "12:00", "end": "16:00" }
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "consultant",
+            "googleId": "consultant005",
+            "email": "consultant5@example.com",
+            "name": "Consultant Five",
+            "phoneNumber": "+505050505",
+            "avatar": "https://toplawyerscanada.ca/wp-content/uploads/Criminal-Defence-Lawyer-Toronto-Richard-Posner.jpg",
+            "specialization": "Employment Law",
+            "ratePerHour": 300,
+            "availability": [
+                {
+                    "day": "Tuesday",
+                    "timeSlots": [
+                        { "start": "08:00", "end": "12:00" }
+                    ]
+                },
+                {
+                    "day": "Thursday",
+                    "timeSlots": [
+                        { "start": "13:00", "end": "17:00" }
+                    ]
+                }
+            ]
+        }
+        
+        
+        
+    ],
+    "services": [
+        {   
+            "id": "service001",
+            "name": "Tax Advice",
+            "description": "Expert advice on tax-related matters.",
+            "rate": 250,
+            "consultantId": "consultant001",
+            "consultantName": "Consultant One"
+        },
+        {   "id": "service002",
+            "name": "Contract Review",
+            "description": "Comprehensive contract analysis and recommendations.",
+            "rate": 300,
+            "consultantId": "consultant002",
+            "consultantName": "Consultant Two"
+        },
+        {   "id": "service003",
+            "name": "Business Incorporation",
+            "description": "Guidance on incorporating your business.",
+            "rate": 200,
+            "consultantId": "consultant001",
+            "consultantName": "Consultant One"
+        },
+        {   "id": "service004",
+            "name": "Dispute Resolution",
+            "description": "Support and advice on resolving disputes.",
+            "rate": 350,
+            "consultantId": "consultant002",
+            "consultantName": "Consultant Two"
+        }
+    ],
+    "bookings": [
+        {
+            "clientId": "client001",
+            "consultantId": "consultant001",
+            "serviceId": "service1",
+            "status": "confirmed",
+            "time": { "start": "10:00", "end": "11:00" },
+            "date": "2024-11-20"
+        },
+        {
+            "clientId": "client002",
+            "consultantId": "consultant002",
+            "serviceId": "service2",
+            "status": "pending",
+            "time": { "start": "15:00", "end": "16:00" },
+            "date": "2024-11-21"
+        },
+        {
+            "clientId": "client003",
+            "consultantId": "consultant001",
+            "serviceId": "service3",
+            "status": "completed",
+            "time": { "start": "09:00", "end": "10:00" },
+            "date": "2024-11-22"
+        },
+        {
+            "clientId": "client002",
+            "consultantId": "consultant001",
+            "serviceId": "service4",
+            "status": "confirmed",
+            "time": { "start": "13:00", "end": "14:00" },
+            "date": "2024-11-23"
+        },
+        {
+            "clientId": "client001",
+            "consultantId": "consultant002",
+            "serviceId": "service2",
+            "status": "canceled",
+            "time": { "start": "16:00", "end": "17:00" },
+            "date": "2024-11-24"
+        }
+    ],
+    "notifications": [
+        {
+            "userId": "consultant001",
+            "message": "New booking request from Client One.",
+            "type": "info",
+            "read": false
+        },
+        {
+            "userId": "client002",
+            "message": "Your booking has been confirmed.",
+            "type": "success",
+            "read": true
+        },
+        {
+            "userId": "consultant002",
+            "message": "Client Two canceled the booking.",
+            "type": "warning",
+            "read": false
+        },
+        {
+            "userId": "client003",
+            "message": "Your booking has been completed.",
+            "type": "success",
+            "read": true
+        },
+        {
+            "userId": "client001",
+            "message": "Your refund has been processed.",
+            "type": "info",
+            "read": true
+        },
+        {
+            "userId": "consultant001",
+            "message": "You have a pending booking.",
+            "type": "alert",
+            "read": false
+        }
+    ],
+    "policies": [
+        {
+            "title": "Cancellation Policy",
+            "content": "Bookings can be canceled up to 24 hours in advance."
+        },
+        {
+            "title": "Refund Policy",
+            "content": "Refunds are issued for canceled bookings as per the policy."
+        },
+        {
+            "title": "Privacy Policy",
+            "content": "We protect your data and will not share it without consent."
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Consultant Platform</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c5282;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #4299e1;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #2b6cb0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">📡</div>
+        <h1>You're Offline</h1>
+        <p>It seems you've lost your internet connection. Don't worry - some features are still available offline!</p>
+        <p>You can still view previously loaded consultants and your cached appointments.</p>
+        <a href="/" class="btn">Try Again</a>
+    </div>
+</body>
+</html>

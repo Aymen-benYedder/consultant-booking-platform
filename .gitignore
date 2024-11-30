@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+/coverage
+
+# Production
+/build
+/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+localhost-*.log
+localhost3000-*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+yourDatabaseName/
+.history/
+src-old/
+lighhouse repports/
+cp-20242811_164655/
+PROJECT_DOCUMENTATION.md
+ai_context.log
+project-structure.md
+project_context.md
+
+# Keep only these files in root
+/*
+!.gitignore
+!README.md
+!consultant-frontend/
+!consultant-backend/

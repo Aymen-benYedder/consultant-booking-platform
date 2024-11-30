@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Legal Advice",
+        "description": "Professional legal consultation",
+        "pricePerSession": 200,
+        "sessionDuration": 60,
+        "consultantId": "consultantUserId1"
+    },
+    {
+        "title": "Financial Planning",
+        "description": "Comprehensive financial planning services",
+        "pricePerSession": 250,
+        "sessionDuration": 90,
+        "consultantId": "consultantUserId2"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "userId": "consultantUserId1",
+        "specialization": "Legal Consultation",
+        "ratePerHour": 150,
+        "availability": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    {
+                        "start": "09:00",
+                        "end": "17:00"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "userId": "consultantUserId2",
+        "specialization": "Financial Consultation",
+        "ratePerHour": 200,
+        "availability": [
+            {
+                "day": "Tuesday",
+                "timeSlots": [
+                    {
+                        "start": "10:00",
+                        "end": "16:00"
+                    }
+                ]
+            }
+        ]
+    }
+]

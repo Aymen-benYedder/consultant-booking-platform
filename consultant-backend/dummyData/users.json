@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "password": "admin123",
+        "role": "admin",
+        "phoneNumber": "+1122334455"
+    },
+    {
+        "name": "Consultant User",
+        "email": "consultant@example.com",
+        "password": "consultant123",
+        "role": "consultant",
+        "specialization": "Legal Consultation",
+        "ratePerHour": 150
+    },
+    {
+        "name": "Client User",
+        "email": "client@example.com",
+        "password": "client123",
+        "role": "client"
+    }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Consultant Platform" />
+    
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://accounts.google.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="%PUBLIC_URL%/static/css/main.chunk.css" as="style" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Consultant Platform</title>
+    
+    <!-- Defer non-critical scripts -->
+    <script>
+      // Load Google Sign-In script only when needed
+      function loadGoogleScript() {
+        if (!window.googleScriptLoaded) {
+          const script = document.createElement('script');
+          script.src = 'https://accounts.google.com/gsi/client';
+          script.async = true;
+          script.defer = true;
+          script.onload = () => {
+            window.googleScriptLoaded = true;
+            if (window.onGoogleScriptLoad) {
+              window.onGoogleScriptLoad();
+            }
+          };
+          document.head.appendChild(script);
+        }
+      }
+
+      // Initialize service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+  </head>
+  <body class="h-screen">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="h-full"></div>
+  </body>
+</html>

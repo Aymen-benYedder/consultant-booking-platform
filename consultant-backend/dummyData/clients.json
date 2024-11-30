@@ -1,0 +1,10 @@
+[
+    {
+        "userId": "clientUserId1",
+        "bookings": []
+    },
+    {
+        "userId": "clientUserId2",
+        "bookings": []
+    }
+]

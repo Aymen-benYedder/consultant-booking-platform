@@ -1,0 +1,22 @@
+[
+    {
+        "clientId": "clientUserId1",
+        "consultantId": "consultantUserId1",
+        "serviceId": "serviceId1",
+        "bookingDate": "2023-10-01T10:00:00Z",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "status": "booked",
+        "paymentStatus": "pending"
+    },
+    {
+        "clientId": "clientUserId2",
+        "consultantId": "consultantUserId2",
+        "serviceId": "serviceId2",
+        "bookingDate": "2023-10-02T14:00:00Z",
+        "startTime": "14:00",
+        "endTime": "15:30",
+        "status": "booked",
+        "paymentStatus": "pending"
+    }
+]
