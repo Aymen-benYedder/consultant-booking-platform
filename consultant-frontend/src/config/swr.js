@@ -1,5 +1,3 @@
-import { SWRConfig } from 'swr';
-
 export const swrConfig = {
   // Enable automatic revalidation on window focus
   revalidateOnFocus: true,
