@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 const CACHE_NAME = 'consultant-cache-v1';
 const STATIC_ASSETS = [
   '/',
