@@ -66,7 +66,10 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
   'https://consultant-booking-platform-frontend.vercel.app',
   'https://consultant-booking-platform-front-it6sh0q9a.vercel.app',
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'http://194.164.203.235',
+  'http://194.164.203.235:3000',
+  'http://localhost:5173'
 ];
 
 app.use(cors({
