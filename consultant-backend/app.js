@@ -43,9 +43,19 @@ connectDB();
 const app = express();
 
 // Create required directories for file uploads
-const mediaDir = path.join(__dirname, 'media');
+const mediaDir = process.env.NODE_ENV === 'production' 
+  ? path.join('/tmp', 'media')
+  : path.join(__dirname, 'media');
+
 const documentsDir = path.join(mediaDir, 'documents');
-fs.mkdirSync(documentsDir, { recursive: true });
+
+try {
+  fs.mkdirSync(documentsDir, { recursive: true });
+  console.log('Successfully created media directories');
+} catch (error) {
+  console.error('Error creating media directories:', error);
+  // Continue execution even if directory creation fails
+}
 
 /**
  * Middleware Configuration
