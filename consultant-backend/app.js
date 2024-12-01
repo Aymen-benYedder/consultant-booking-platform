@@ -64,7 +64,8 @@ try {
 // CORS setup for frontend communication
 const allowedOrigins = [
   process.env.FRONTEND_URL,
-  'https://consultant-booking-platform.vercel.app',
+  'https://consultant-booking-platform-frontend.vercel.app',
+  'https://consultant-booking-platform-front-it6sh0q9a.vercel.app',
   'http://localhost:3000'
 ];
 
@@ -81,7 +82,8 @@ app.use(cors({
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200 // For legacy browser support
 }));
 
 // Request parsing middleware
