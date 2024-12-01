@@ -1,4 +1,6 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+import { getApiUrl } from '../utils/environment';
+
+const API_BASE_URL = getApiUrl();
 
 const validateToken = (token) => {
   if (!token) return false;
