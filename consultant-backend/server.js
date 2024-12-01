@@ -19,7 +19,12 @@ dotenv.config();
 // Validate environment variables and get validated config
 const env = validateEnv();
 
-// Start the server
-app.listen(env.PORT, () => {
-  console.log(`Server running in ${env.NODE_ENV} mode on port ${env.PORT}`);
-});
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(env.PORT, () => {
+    console.log(`Server running in ${env.NODE_ENV} mode on port ${env.PORT}`);
+  });
+}
+
+// Export the Express API
+module.exports = app;
