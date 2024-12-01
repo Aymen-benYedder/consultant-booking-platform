@@ -5,7 +5,6 @@ import { api } from '../utils/api';
 import { 
   CalendarDaysIcon, 
   ClockIcon, 
-  UserIcon, 
   CurrencyDollarIcon, 
   DocumentIcon,
   XMarkIcon,

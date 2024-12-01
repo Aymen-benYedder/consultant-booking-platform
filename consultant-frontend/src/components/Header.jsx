@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
 import { AppContext } from '../AppContext';
 import LogoBrand from './header/LogoBrand';
@@ -11,6 +11,7 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +24,7 @@ const Header = () => {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [window.location.pathname]);
+  }, [location.pathname]);
 
   const handleGoogleLogin = async (credentialResponse) => {
     try {

@@ -52,7 +52,7 @@ const ConsultantProfile = () => {
     };
 
     fetchConsultant();
-  }, [consultantId, consultants]);
+  }, [consultantId, consultants, navigate]);
 
   // Show loading spinner
   if (isLoading) {

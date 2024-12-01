@@ -1,50 +1,5 @@
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
 
-const handleResponse = async (response) => {
-  const contentType = response.headers.get('content-type');
-  
-  if (!response.ok) {
-    // Log the error details
-    console.error('API Error:', {
-      status: response.status,
-      statusText: response.statusText,
-      contentType,
-      url: response.url
-    });
-
-    // Try to get error details
-    let errorDetails = '';
-    try {
-      if (contentType && contentType.includes('application/json')) {
-        const errorJson = await response.json();
-        errorDetails = errorJson.message || JSON.stringify(errorJson);
-      } else {
-        errorDetails = await response.text();
-        console.log('Raw error response:', errorDetails);
-      }
-    } catch (e) {
-      console.error('Error parsing error response:', e);
-      errorDetails = response.statusText;
-    }
-
-    throw new Error(`API Error (${response.status}): ${errorDetails}`);
-  }
-
-  // Check if response is JSON
-  if (!contentType || !contentType.includes('application/json')) {
-    console.error('Invalid content type:', contentType);
-    throw new Error(`Expected JSON response but got ${contentType || 'unknown content type'}`);
-  }
-
-  try {
-    const data = await response.json();
-    return { data, status: response.status };
-  } catch (error) {
-    console.error('Error parsing JSON response:', error);
-    throw new Error('Failed to parse JSON response');
-  }
-};
-
 const authenticatedFetch = async (endpoint, options = {}) => {
   const token = localStorage.getItem('token');
   const url = `${API_BASE_URL}${endpoint}`;

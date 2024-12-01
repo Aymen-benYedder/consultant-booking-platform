@@ -19,7 +19,6 @@ const LoadingFallback = () => (
 function HomePage() {
   const { consultants, services, isLoading, error: contextError } = useContext(AppContext);
   const [activeTab, setActiveTab] = useState('consultants');
-  const [error, setError] = useState(null);
   const [filteredConsultants, setFilteredConsultants] = useState([]);
   const [filteredServices, setFilteredServices] = useState([]);
 
@@ -72,11 +71,11 @@ function HomePage() {
     );
   }
 
-  if (error || contextError) {
+  if (contextError) {
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="flex flex-col justify-center items-center h-[calc(100vh-64px)]">
-          <p className="text-red-500 mb-4">{(error || contextError).message}</p>
+          <p className="text-red-500 mb-4">{contextError.message}</p>
         </div>
       </div>
     );

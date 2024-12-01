@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Dialog } from '@headlessui/react';
 import { consultantsAPI } from '../../../services/api';
 import { useAuth } from '../../../contexts/AppContext';
@@ -21,7 +21,7 @@ const ConsultantModal = ({ isOpen, onClose, consultantId, initialService = null 
   const closeButtonRef = useRef(null);
   const bookingStore = useBookingStore();
 
-  const fetchConsultantData = async () => {
+  const fetchConsultantData = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -59,13 +59,13 @@ const ConsultantModal = ({ isOpen, onClose, consultantId, initialService = null 
     } finally {
       setLoading(false);
     }
-  };
+  }, [consultantId, initialService]);
 
   useEffect(() => {
     if (consultantId && isOpen) {
       fetchConsultantData();
     }
-  }, [consultantId, isOpen]);
+  }, [consultantId, isOpen, fetchConsultantData]);
 
   const handleClose = () => {
     setSelectedService(null);
